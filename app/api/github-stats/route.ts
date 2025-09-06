@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const response = await fetch('https://api.github.com/repos/UmarGit/zyra', {
+    const response = await fetch('https://api.github.com/repos/Syndrect/zyra', {
       headers: {
         'Accept': 'application/vnd.github.v3+json',
         'User-Agent': 'Zyra-App',

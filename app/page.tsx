@@ -174,7 +174,7 @@ export default function LandingPage() {
               asChild
             >
               <a
-                href="https://github.com/UmarGit/zyra"
+                href="https://github.com/Syndrect/zyra"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {

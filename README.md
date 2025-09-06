@@ -23,7 +23,7 @@ Unleash endless creativity with Zyra - a collaborative platform for AI-powered v
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/UmarGit/zyra.git
+git clone https://github.com/Syndrect/zyra.git
 cd zyra
 ```
 
@@ -103,8 +103,8 @@ We welcome contributions from the community! Whether you're fixing bugs, adding 
 
 ### Ways to Contribute
 
-- 🐛 **Bug Reports**: Found a bug? [Open an issue](https://github.com/UmarGit/zyra/issues/new)
-- 💡 **Feature Requests**: Have an idea? [Start a discussion](https://github.com/UmarGit/zyra/discussions)
+- 🐛 **Bug Reports**: Found a bug? [Open an issue](https://github.com/Syndrect/zyra/issues/new)
+- 💡 **Feature Requests**: Have an idea? [Start a discussion](https://github.com/Syndrect/zyra/discussions)
 - 🔧 **Code Contributions**: Submit pull requests for bug fixes or new features
 - 📚 **Documentation**: Help improve our docs and examples
 - 🎨 **Design**: Contribute to UI/UX improvements
@@ -141,8 +141,8 @@ We are committed to fostering a welcoming and inclusive community. Please be res
 
 ### Getting Help
 
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/UmarGit/zyra/discussions)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/UmarGit/zyra/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Syndrect/zyra/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Syndrect/zyra/issues)
 - 📧 **Contact**: Reach out to the maintainers
 
 ## 📖 Learn More
