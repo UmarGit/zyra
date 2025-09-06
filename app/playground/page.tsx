@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label";
 import { Settings, Type, ImageIcon } from "lucide-react";
 import { useState } from "react";
 import { useAppStore } from "@/lib/store";
+import { trackPlaygroundAction, trackButtonClick } from "@/lib/analytics";
 
 const nodeTypes = {
   imageNode: ImageNode,
@@ -57,9 +58,10 @@ export default function PlaygroundPage() {
 
         <div className="absolute top-4 left-4 z-10 flex gap-2">
           <Button
-            onClick={() =>
-              addImageNode({ x: Math.random() * 400, y: Math.random() * 400 })
-            }
+            onClick={() => {
+              addImageNode({ x: Math.random() * 400, y: Math.random() * 400 });
+              trackPlaygroundAction('add_image_node');
+            }}
             size="sm"
           >
             <ImageIcon className="h-4 w-4" />
@@ -67,9 +69,10 @@ export default function PlaygroundPage() {
           </Button>
 
           <Button
-            onClick={() =>
-              addTextNode({ x: Math.random() * 400, y: Math.random() * 400 })
-            }
+            onClick={() => {
+              addTextNode({ x: Math.random() * 400, y: Math.random() * 400 });
+              trackPlaygroundAction('add_text_node');
+            }}
             size="sm"
             variant="outline"
           >
@@ -80,7 +83,10 @@ export default function PlaygroundPage() {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+            onClick={() => {
+              setIsSettingsOpen(!isSettingsOpen);
+              trackButtonClick('toggle_settings', 'playground');
+            }}
           >
             <Settings className="h-4 w-4" />
             <span className="hidden md:block ml-2">Settings</span>

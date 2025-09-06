@@ -7,6 +7,7 @@ import RotatingText from "@/components/rotating-text";
 import LightRays from "@/components/light-rays";
 import CountUp from "@/components/count-up";
 import { useEffect, useState } from "react";
+import { trackButtonClick, trackGitHubInteraction } from "@/lib/analytics";
 
 interface GitHubStats {
   stars: number;
@@ -159,6 +160,7 @@ export default function LandingPage() {
               <Button
                 size="sm"
                 className="text-sm !px-6 !py-2 rounded-lg bg-slate-900 hover:bg-slate-800 transition-all duration-300 text-white font-medium border-0"
+                onClick={() => trackButtonClick('start_creating', 'landing_page')}
               >
                 Start Creating
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -175,6 +177,10 @@ export default function LandingPage() {
                 href="https://github.com/UmarGit/zyra"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  trackButtonClick('github_star', 'landing_page');
+                  trackGitHubInteraction('star_click');
+                }}
               >
                 <Github className="mr-2 h-4 w-4" />
                 Star on GitHub

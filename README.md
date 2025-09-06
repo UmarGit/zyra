@@ -38,7 +38,27 @@ pnpm install
 bun install
 ```
 
-3. Start the development server:
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+
+Edit `.env.local` and add your API keys:
+```bash
+# Firebase Configuration (for Analytics)
+NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# Gemini API Configuration (for Image Generation)
+NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key
+```
+
+4. Start the development server:
 ```bash
 npm run dev
 # or
@@ -49,9 +69,33 @@ pnpm dev
 bun dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## 📊 Analytics & Tracking
+
+Zyra includes Firebase Analytics integration to help understand user behavior and improve the platform:
+
+### Tracked Events
+- **Page Views**: Automatic tracking of page navigation
+- **Button Clicks**: User interactions with key interface elements
+- **Playground Actions**: Node creation, settings toggles, and workflow actions
+- **GitHub Interactions**: Stars, forks, and repository engagement
+- **Image Generation**: Success/failure rates and performance metrics
+
+### Privacy
+- All analytics data is anonymized and aggregated
+- No personal information is collected without consent
+- Analytics help improve user experience and platform performance
+
+### Setup Firebase Analytics
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+2. Enable Analytics for your project
+3. Get your Firebase configuration from Project Settings
+4. Add the configuration to your `.env.local` file
+5. Analytics will automatically start tracking user interactions
 
 ## 🤝 Contributing
 
